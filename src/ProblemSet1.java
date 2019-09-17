@@ -68,17 +68,27 @@ public class ProblemSet1 {
          * what marking period grade will I get?
          */
 
-        // int homework1 = 88;
-        // int homework2 = 91;
-        // int homework3 = 0;
-        // int quiz1 = 84;
-        // int quiz2 = 89;
-        // int quiz3 = 93;
-        // int test1 = 74;
-        // int test2 = 87;
-        // int test3 = 82;
+		 final double homeworkpercent = 0.15;
+		 int homework1 = 88;
+		 int homework2 = 91;
+		 int homework3 = 0;
+		 int homeworkavg = (homework1 + homework2 + homework3) / 3;
+		 System.out.println(String.format("%.2f", homeworkavg));
 
+		 int quiz1 = 84;
+		 int quiz2 = 89;
+		 int quiz3 = 93;
+		 //X
 
+		 int test1 = 74;
+		 int test2 = 87;
+		 int test3 = 82;
+		 /*
+		 note to self - multiply grade by decimal of grade %
+		 homework avg: 8.95
+		 quiz avg: 31.03
+		 test avg: 40.5
+		 */
 
         /*
          * Exercise 5.
