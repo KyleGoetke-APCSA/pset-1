@@ -12,8 +12,8 @@
  * questions, and fix your mistakes. It's the only way to get good at programming.
  */
 
-import java.text.NumberFormat;
-import java.util.Locale;
+import java.text.NumberFormat;													// Code taken from
+import java.util.Locale;														// https://javadevnotes.com/java-integer-to-string-with-commas
 
 public class ProblemSet1 {
 
@@ -26,14 +26,14 @@ public class ProblemSet1 {
          */
 
 		 final double inchToMM = 25.4;
-		 final double side1 = 8.5;
-		 final double side2 = 11;
-		 double side1mm = side1 * inchToMM;
-		 double side2mm = side2 * inchToMM;
-		 double area = side1mm * side2mm;
+		 final double width = 8.5;
+		 final double height = 11;
+		 double widthmm = width * inchToMM;
+		 double heightmm = height * inchToMM;
+		 double area = widthmm * heightmm;
 		 NumberFormat numberFormat = NumberFormat.getNumberInstance(Locale.US);	// Code taken from
-		 String numberAsString = numberFormat.format(area);						// https://javadevnotes.com/java-integer-to-string-with-commas
-		 System.out.println("\n" + numberAsString + " square millimeters.");
+		 String formattedarea = numberFormat.format(area);						// https://javadevnotes.com/java-integer-to-string-with-commas
+		 System.out.println("\n" + formattedarea + " square millimeters.");
 
         /*
          * Exercise 2.
@@ -41,7 +41,11 @@ public class ProblemSet1 {
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
 
-
+		final double inchToCM = 2.54;
+		double widthcm = width * inchToCM;
+		double heightcm = height * inchToCM;
+		double perimeter = (widthcm * 2) + (heightcm * 2);
+		System.out.println("\n" + perimeter + " square millimeters.");
 
         /*
          * Exercise 3.
