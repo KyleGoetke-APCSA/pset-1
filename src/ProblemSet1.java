@@ -14,6 +14,7 @@
 
 import java.text.NumberFormat;													// Code taken from
 import java.util.Locale;														// https://javadevnotes.com/java-integer-to-string-with-commas
+import java.lang.Math;
 
 public class ProblemSet1 {
 
@@ -45,7 +46,7 @@ public class ProblemSet1 {
 		double widthcm = width * inchToCM;
 		double heightcm = height * inchToCM;
 		double perimeter = (widthcm * 2) + (heightcm * 2);
-		System.out.println("\n" + perimeter + " centimeters.");
+		System.out.println("\n" + String.format("%.2f", perimeter) + " centimeters.");
 
         /*
          * Exercise 3.
@@ -54,7 +55,11 @@ public class ProblemSet1 {
          * by-11-inch sheet of paper?
          */
 
-
+		 double widthsquared = width * width;
+		 double heightsquared = height * height;
+		 double bignumber = widthsquared + heightsquared;
+		 double diagonal = Math.sqrt(bignumber);
+		 System.out.println("\n" + String.format("%.2f", diagonal) + " inches.");
 
         /*
          * Exercise 4.
