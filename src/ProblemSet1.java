@@ -45,7 +45,7 @@ public class ProblemSet1 {
 		double widthcm = width * inchToCM;
 		double heightcm = height * inchToCM;
 		double perimeter = (widthcm * 2) + (heightcm * 2);
-		System.out.println("\n" + perimeter + " square millimeters.");
+		System.out.println("\n" + perimeter + " centimeters.");
 
         /*
          * Exercise 3.
