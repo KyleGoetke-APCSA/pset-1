@@ -33,7 +33,7 @@ public class ProblemSet1 {
 		 double area = side1mm * side2mm;
 		 NumberFormat numberFormat = NumberFormat.getNumberInstance(Locale.US);	// Code taken from
 		 String numberAsString = numberFormat.format(area);						// https://javadevnotes.com/java-integer-to-string-with-commas
-		 System.out.println(numberAsString + " square millimeters.");
+		 System.out.println("\n" + numberAsString + " square millimeters.");
 
         /*
          * Exercise 2.
