@@ -68,21 +68,37 @@ public class ProblemSet1 {
          * what marking period grade will I get?
          */
 
-		 final double homeworkpercent = 0.15;
+		 final double homeworkweight = 0.15;
+		 final double testweight = 0.5;
+		 final double quizweight = 0.35;
+
 		 int homework1 = 88;
 		 int homework2 = 91;
 		 int homework3 = 0;
-		 int homeworkavg = (homework1 + homework2 + homework3) / 3;
-		 System.out.println(String.format("%.2f", homeworkavg));
+		 double homework1percent = homework1 * homeworkweight;
+		 double homework2percent = homework2 * homeworkweight;
+		 double homework3percent = homework3 * homeworkweight;
+		 double totalhomeworkpercent = (homework1percent + homework2percent + homework3percent) / 3;
 
 		 int quiz1 = 84;
 		 int quiz2 = 89;
 		 int quiz3 = 93;
-		 //X
+		 double quiz1percent = quiz1 * quizweight;
+		 double quiz2percent = quiz2 * quizweight;
+		 double quiz3percent = quiz3 * quizweight;
+		 double totalquizpercent = (quiz1percent + quiz2percent + quiz3percent) / 3;
 
 		 int test1 = 74;
 		 int test2 = 87;
 		 int test3 = 82;
+		 double test1percent = test1 * testweight;
+		 double test2percent = test2 * testweight;
+		 double test3percent = test3 * testweight;
+		 double totaltestpercent = (test1percent + test2percent + test3percent) / 3;
+
+		 double finalgrade = totalhomeworkpercent + totalquizpercent + totaltestpercent;
+		 System.out.println(String.format("\n%.2f", finalgrade) + "%");
+
 		 /*
 		 note to self - multiply grade by decimal of grade %
 		 homework avg: 8.95
