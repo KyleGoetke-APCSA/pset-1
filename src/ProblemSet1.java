@@ -24,12 +24,12 @@ public class ProblemSet1 {
          * What is the area (in square millimeters) of an 8.5-by-11-inch sheet of paper?
          */
 
-		 final double inchToMM = 25.4;
-		 final double width = 8.5;
-		 final double height = 11;
-		 double widthmm = width * inchToMM;
-		 double heightmm = height * inchToMM;
-		 double area = widthmm * heightmm;
+		 final double INCH_TO_MM = 25.4;
+		 final double WIDTH = 8.5;
+		 final double HEIGHT = 11;
+		 double widthMM = WIDTH * INCH_TO_MM;
+		 double heightMM = HEIGHT * INCH_TO_MM;
+		 double area = widthMM * heightMM;
 		 System.out.println(String.format("\n%,.2f", area) + " square millimeters.");
 
         /*
@@ -38,10 +38,10 @@ public class ProblemSet1 {
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
 
-		final double inchToCM = 2.54;
-		double widthcm = width * inchToCM;
-		double heightcm = height * inchToCM;
-		double perimeter = (widthcm * 2) + (heightcm * 2);
+		final double INCH_TO_CM = 2.54;
+		double widthCM = WIDTH * INCH_TO_CM;
+		double heightCM = HEIGHT * INCH_TO_CM;
+		double perimeter = (widthCM * 2) + (heightCM * 2);
 		System.out.println(String.format("\n%.2f", perimeter) + " centimeters.");
 
         /*
@@ -51,10 +51,10 @@ public class ProblemSet1 {
          * by-11-inch sheet of paper?
          */
 
-		 double widthsquared = width * width;
-		 double heightsquared = height * height;
-		 double bignumber = widthsquared + heightsquared;
-		 double diagonal = Math.sqrt(bignumber);
+		 double widthSquared = WIDTH * WIDTH;
+		 double heightSquared = HEIGHT * HEIGHT;
+		 double bigNumber = widthSquared + heightSquared;
+		 double diagonal = Math.sqrt(bigNumber);
 		 System.out.println(String.format("\n%.2f", diagonal) + " inches.");
 
         /*
@@ -64,35 +64,35 @@ public class ProblemSet1 {
          * what marking period grade will I get?
          */
 
-		 final double homeworkweight = 0.15;
-		 final double testweight = 0.5;
-		 final double quizweight = 0.35;
+		 final double HOMEWORK_WEIGHT = 0.15;
+		 final double QUIZ_WEIGHT = 0.35;
+		 final double TEST_WEIGHT = 0.5;
 
 		 int homework1 = 88;
 		 int homework2 = 91;
 		 int homework3 = 0;
-		 double homework1percent = homework1 * homeworkweight;
-		 double homework2percent = homework2 * homeworkweight;
-		 double homework3percent = homework3 * homeworkweight;
-		 double totalhomeworkpercent = (homework1percent + homework2percent + homework3percent) / 3;
+		 double homework1Percent = homework1 * HOMEWORK_WEIGHT;
+		 double homework2Percent = homework2 * HOMEWORK_WEIGHT;
+		 double homework3Percent = homework3 * HOMEWORK_WEIGHT;
+		 double totalHomeworkPercent = (homework1Percent + homework2Percent + homework3Percent) / 3;
 
 		 int quiz1 = 84;
 		 int quiz2 = 89;
 		 int quiz3 = 93;
-		 double quiz1percent = quiz1 * quizweight;
-		 double quiz2percent = quiz2 * quizweight;
-		 double quiz3percent = quiz3 * quizweight;
-		 double totalquizpercent = (quiz1percent + quiz2percent + quiz3percent) / 3;
+		 double quiz1Percent = quiz1 * QUIZ_WEIGHT;
+		 double quiz2Percent = quiz2 * QUIZ_WEIGHT;
+		 double quiz3Percent = quiz3 * QUIZ_WEIGHT;
+		 double totalQuizPercent = (quiz1Percent + quiz2Percent + quiz3Percent) / 3;
 
 		 int test1 = 74;
 		 int test2 = 87;
 		 int test3 = 82;
-		 double test1percent = test1 * testweight;
-		 double test2percent = test2 * testweight;
-		 double test3percent = test3 * testweight;
-		 double totaltestpercent = (test1percent + test2percent + test3percent) / 3;
+		 double test1Percent = test1 * TEST_WEIGHT;
+		 double test2Percent = test2 * TEST_WEIGHT;
+		 double test3Percent = test3 * TEST_WEIGHT;
+		 double totalTestPercent = (test1Percent + test2Percent + test3Percent) / 3;
 
-		 double finalgrade = totalhomeworkpercent + totalquizpercent + totaltestpercent;
+		 double finalgrade = totalHomeworkPercent + totalQuizPercent + totalTestPercent;
 		 System.out.println(String.format("\n%.2f", finalgrade) + "%.");
 
         /*
@@ -111,16 +111,17 @@ public class ProblemSet1 {
 		 double saturday = 11.5;
 		 double sunday = 0;
 
-		 double mondaymoney = monday * wage;
-		 double tuesdaymoney = tuesday * wage;
-		 double wednesdaymoney = wednesday * wage;
-		 double thursdaymoney = thursday * wage;
-		 double fridaymoney = friday * wage;
-		 double saturdaymoney = saturday * wage;
-		 double sundaymoney = sunday * wage;
+		 double mondayMoney = monday * wage;
+		 double tuesdayMoney = tuesday * wage;
+		 double wednesdayMoney = wednesday * wage;
+		 double thursdayMoney = thursday * wage;
+		 double fridayMoney = friday * wage;
+		 double saturdayMoney = saturday * wage;
+		 double sundayMoney = sunday * wage;
 
-		 double totalmoney = sundaymoney + mondaymoney + tuesdaymoney + wednesdaymoney + thursdaymoney + fridaymoney + saturdaymoney + sundaymoney;
-		 System.out.println(String.format("\n$%.2f", totalmoney) + ".");
+		 double totalMoney = sundayMoney + mondayMoney + tuesdayMoney + wednesdayMoney
+		   + thursdayMoney + fridayMoney + saturdayMoney + sundayMoney;
+		 System.out.println(String.format("\n$%.2f", totalMoney) + ".");
 
         /*
          * Exercise 6.
@@ -128,7 +129,22 @@ public class ProblemSet1 {
          * What is my take-home pay each check?
          */
 
+		 final double YEARLY_SALARY = 117000;
+		 final double FEDERAL_TAX = 0.24;
+		 final double STATE_TAX = 0.0637;
+		 final double FOUR01K = 0.07;
+		 double taxableSalary = YEARLY_SALARY / 24;
 
+		 double moneyForFOUR01K = taxableSalary * FOUR01K;
+		 taxableSalary = taxableSalary - moneyForFOUR01K;
+
+		 double moneyForFed = taxableSalary * FEDERAL_TAX;
+		 taxableSalary = taxableSalary - moneyForFed;
+
+		 double moneyForState = taxableSalary * STATE_TAX;
+		 taxableSalary = taxableSalary - moneyForState;
+
+		 System.out.println(String.format("\n$%,.2f", taxableSalary) + ".");
 
         /*
          * Exercise 7.
