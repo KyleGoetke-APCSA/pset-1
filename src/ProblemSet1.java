@@ -12,8 +12,6 @@
  * questions, and fix your mistakes. It's the only way to get good at programming.
  */
 
-import java.text.NumberFormat;													// Code taken from
-import java.util.Locale;														// https://javadevnotes.com/java-integer-to-string-with-commas
 import java.lang.Math;
 
 public class ProblemSet1 {
@@ -32,9 +30,7 @@ public class ProblemSet1 {
 		 double widthmm = width * inchToMM;
 		 double heightmm = height * inchToMM;
 		 double area = widthmm * heightmm;
-		 NumberFormat numberFormat = NumberFormat.getNumberInstance(Locale.US);	// Code taken from
-		 String formattedarea = numberFormat.format(area);						// https://javadevnotes.com/java-integer-to-string-with-commas
-		 System.out.println("\n" + formattedarea + " square millimeters.");
+		 System.out.println("\n" + String.format("%,.2f", area) + " square millimeters.");
 
         /*
          * Exercise 2.
@@ -97,7 +93,7 @@ public class ProblemSet1 {
 		 double totaltestpercent = (test1percent + test2percent + test3percent) / 3;
 
 		 double finalgrade = totalhomeworkpercent + totalquizpercent + totaltestpercent;
-		 System.out.println(String.format("\n%.2f", finalgrade) + "%");
+		 System.out.println("\n" + String.format("%.2f", finalgrade) + "%.");
 
         /*
          * Exercise 5.
