@@ -30,7 +30,7 @@ public class ProblemSet1 {
 		 double widthmm = width * inchToMM;
 		 double heightmm = height * inchToMM;
 		 double area = widthmm * heightmm;
-		 System.out.println("\n" + String.format("%,.2f", area) + " square millimeters.");
+		 System.out.println(String.format("\n%,.2f", area) + " square millimeters.");
 
         /*
          * Exercise 2.
@@ -42,7 +42,7 @@ public class ProblemSet1 {
 		double widthcm = width * inchToCM;
 		double heightcm = height * inchToCM;
 		double perimeter = (widthcm * 2) + (heightcm * 2);
-		System.out.println("\n" + String.format("%.2f", perimeter) + " centimeters.");
+		System.out.println(String.format("\n%.2f", perimeter) + " centimeters.");
 
         /*
          * Exercise 3.
@@ -55,7 +55,7 @@ public class ProblemSet1 {
 		 double heightsquared = height * height;
 		 double bignumber = widthsquared + heightsquared;
 		 double diagonal = Math.sqrt(bignumber);
-		 System.out.println("\n" + String.format("%.2f", diagonal) + " inches.");
+		 System.out.println(String.format("\n%.2f", diagonal) + " inches.");
 
         /*
          * Exercise 4.
@@ -93,7 +93,7 @@ public class ProblemSet1 {
 		 double totaltestpercent = (test1percent + test2percent + test3percent) / 3;
 
 		 double finalgrade = totalhomeworkpercent + totalquizpercent + totaltestpercent;
-		 System.out.println("\n" + String.format("%.2f", finalgrade) + "%.");
+		 System.out.println(String.format("\n%.2f", finalgrade) + "%.");
 
         /*
          * Exercise 5.
@@ -102,7 +102,25 @@ public class ProblemSet1 {
          * will I make this week?
          */
 
+		 final double wage = 12.50;
+		 double monday = 7.5;
+		 double tuesday = 8;
+		 double wednesday = 10.5;
+		 double thursday = 9.5;
+		 double friday = 6;
+		 double saturday = 11.5;
+		 double sunday = 0;
 
+		 double mondaymoney = monday * wage;
+		 double tuesdaymoney = tuesday * wage;
+		 double wednesdaymoney = wednesday * wage;
+		 double thursdaymoney = thursday * wage;
+		 double fridaymoney = friday * wage;
+		 double saturdaymoney = saturday * wage;
+		 double sundaymoney = sunday * wage;
+
+		 double totalmoney = sundaymoney + mondaymoney + tuesdaymoney + wednesdaymoney + thursdaymoney + fridaymoney + saturdaymoney + sundaymoney;
+		 System.out.println(String.format("\n$%.2f", totalmoney) + ".");
 
         /*
          * Exercise 6.
