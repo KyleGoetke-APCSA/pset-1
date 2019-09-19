@@ -99,13 +99,6 @@ public class ProblemSet1 {
 		 double finalgrade = totalhomeworkpercent + totalquizpercent + totaltestpercent;
 		 System.out.println(String.format("\n%.2f", finalgrade) + "%");
 
-		 /*
-		 note to self - multiply grade by decimal of grade %
-		 homework avg: 8.95
-		 quiz avg: 31.03
-		 test avg: 40.5
-		 */
-
         /*
          * Exercise 5.
          *
