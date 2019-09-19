@@ -153,7 +153,16 @@ public class ProblemSet1 {
          * people will be on the last bus?
          */
 
+		 final int STUDENTS = 273;
+		 final int TEACHERS = 28;
+		 final int BUS_CAPACITY = 54;
 
+		 int totalPeople = STUDENTS + TEACHERS;
+
+		 int lastBusNum = 7;
+		 String lastBus = lastBusNum.toString();
+
+		 System.out.println("\n" + "x" + " buses are needed, with " + lastBusNum.toString() + " on the last bus.");
 
         /*
          * Exercise 8.
