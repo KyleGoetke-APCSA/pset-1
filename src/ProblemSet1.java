@@ -193,15 +193,25 @@ public class ProblemSet1 {
          * Are the years 2020, 2100, and 2400 leap years?
          */
 
-
+		 // int firstYear = 2020;
+		 // int secondYear = 2100;
+		 // int thirdYear = 2400;
+		 //
+		 // int isFirstYear = (firstYear % 4);
+		 // int isSecondYear = secondYear % 4;
+		 // int isThirdYear = thirdYear % 4;
+		 // System.out.println(isFirstYear/*, isSecondYear, isThirdYear*/);
 
         /*
          * Exercise 10.
          *
          * What is the wind chill?
          */
+		 int temperature = 38;
+		 int windSpeed = 14;
 
-
+		 double windChill = 35.74 + (0.6215 * temperature) + ((0.4275 * temperature) - 35.75) * Math.pow(windSpeed, 0.16);
+		 System.out.printf("\n%,.1f degrees.\n", windChill);
 
     }
 }
