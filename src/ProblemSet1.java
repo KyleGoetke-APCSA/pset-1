@@ -170,12 +170,6 @@ public class ProblemSet1 {
          * What is the surface area of a standard Cornhole board?
          */
 
-		 // Use a constant to represent the length of the board.
-		 // Use a constant to represent the width of the board.
-		 // Use a constant to represent the diameter of the hole.
-		 // Round the square inches to two decimals.
-		 // Format the square inches with separating commas.
-
 		 final int CORNHOLE_LENGTH = 48;
 		 final int CORNHOLE_WIDTH = 24;
 		 final int CORNHOLE_DIAMETER = 6;
@@ -213,14 +207,15 @@ public class ProblemSet1 {
 		 boolean isSecondYear = (modFourSecondYear == 0 && modHundredSecondYear != 0 || modFourHundredSecondYear == 0);
 		 boolean isThirdYear = (modFourThirdYear == 0 && modHundredThirdYear != 0 || modFourHundredThirdYear == 0);
 
-		 System.out.printf("\n%d is a leap year...%b.\n%d is a leap year...%b.\n%d is a leap year...%b.\n", firstYear, isFirstYear, secondYear, isSecondYear, thirdYear, isThirdYear);
-
+		 System.out.printf("\n%d is a leap year...%b.\n%d is a leap year...%b.\n%d is a leap year...%b.\n",
+		   firstYear, isFirstYear, secondYear, isSecondYear, thirdYear, isThirdYear);
 
         /*
          * Exercise 10.
          *
          * What is the wind chill?
          */
+
 		 int temperature = 38;
 		 int windSpeed = 14;
 
