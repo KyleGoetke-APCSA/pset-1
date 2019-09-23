@@ -193,14 +193,28 @@ public class ProblemSet1 {
          * Are the years 2020, 2100, and 2400 leap years?
          */
 
-		 // int firstYear = 2020;
-		 // int secondYear = 2100;
-		 // int thirdYear = 2400;
-		 //
-		 // int isFirstYear = (firstYear % 4);
-		 // int isSecondYear = secondYear % 4;
-		 // int isThirdYear = thirdYear % 4;
-		 // System.out.println(isFirstYear/*, isSecondYear, isThirdYear*/);
+		 int firstYear = 2020;
+		 int secondYear = 2100;
+		 int thirdYear = 2400;
+
+		 int modFourFirstYear = firstYear % 4;
+		 int modFourSecondYear = secondYear % 4;
+		 int modFourThirdYear = thirdYear % 4;
+
+		 int modHundredFirstYear = firstYear % 100;
+		 int modHundredSecondYear = secondYear % 100;
+		 int modHundredThirdYear = thirdYear % 100;
+
+		 int modFourHundredFirstYear = firstYear % 400;
+		 int modFourHundredSecondYear = secondYear % 400;
+		 int modFourHundredThirdYear = thirdYear % 400;
+
+		 boolean isFirstYear = (modFourFirstYear == 0 && modHundredFirstYear != 0 || modFourHundredFirstYear == 0);
+		 boolean isSecondYear = (modFourSecondYear == 0 && modHundredSecondYear != 0 || modFourHundredSecondYear == 0);
+		 boolean isThirdYear = (modFourThirdYear == 0 && modHundredThirdYear != 0 || modFourHundredThirdYear == 0);
+
+		 System.out.printf("\n%d is a leap year...%b.\n%d is a leap year...%b.\n%d is a leap year...%b.\n", firstYear, isFirstYear, secondYear, isSecondYear, thirdYear, isThirdYear);
+
 
         /*
          * Exercise 10.
