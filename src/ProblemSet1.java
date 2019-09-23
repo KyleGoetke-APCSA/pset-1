@@ -30,7 +30,7 @@ public class ProblemSet1 {
 		 double widthMM = WIDTH * INCH_TO_MM;
 		 double heightMM = HEIGHT * INCH_TO_MM;
 		 double area = widthMM * heightMM;
-		 System.out.println(String.format("\n%,.2f", area) + " square millimeters.");
+		 System.out.printf("\n%,.2f square millimeters.\n", area);
 
         /*
          * Exercise 2.
@@ -42,7 +42,7 @@ public class ProblemSet1 {
 		double widthCM = WIDTH * INCH_TO_CM;
 		double heightCM = HEIGHT * INCH_TO_CM;
 		double perimeter = (widthCM * 2) + (heightCM * 2);
-		System.out.println(String.format("\n%.2f", perimeter) + " centimeters.");
+		System.out.printf("\n%.2f centimeters.\n", perimeter);
 
         /*
          * Exercise 3.
@@ -55,7 +55,7 @@ public class ProblemSet1 {
 		 double heightSquared = HEIGHT * HEIGHT;
 		 double bigNumber = widthSquared + heightSquared;
 		 double diagonal = Math.sqrt(bigNumber);
-		 System.out.println(String.format("\n%.2f", diagonal) + " inches.");
+		 System.out.printf("\n%.2f inches.\n", diagonal);
 
         /*
          * Exercise 4.
@@ -93,7 +93,7 @@ public class ProblemSet1 {
 		 double totalTestPercent = (test1Percent + test2Percent + test3Percent) / 3;
 
 		 double finalgrade = totalHomeworkPercent + totalQuizPercent + totalTestPercent;
-		 System.out.println(String.format("\n%.2f", finalgrade) + "%.");
+		 System.out.printf("\n%.2f%%.\n", finalgrade);
 
         /*
          * Exercise 5.
@@ -121,7 +121,7 @@ public class ProblemSet1 {
 
 		 double totalMoney = sundayMoney + mondayMoney + tuesdayMoney + wednesdayMoney
 		   + thursdayMoney + fridayMoney + saturdayMoney + sundayMoney;
-		 System.out.println(String.format("\n$%.2f", totalMoney) + ".");
+		 System.out.printf("\n$%.2f.\n", totalMoney);
 
         /*
          * Exercise 6.
@@ -162,8 +162,7 @@ public class ProblemSet1 {
 		 double peoplePerBus = ((double)totalPeople) / ((double)BUS_CAPACITY);
 		 double numOfBuses = Math.ceil(peoplePerBus);
 
-		 System.out.printf("\n%.0f buses are needed, with %d passengers on the last bus.", numOfBuses, lastBusNum);
-		 // ("\n" + numOfBuses + " buses are needed, with " + lastBus + " on the last bus.");
+		 System.out.printf("\n%.0f buses are needed, with %d passengers on the last bus.\n", numOfBuses, lastBusNum);
 
         /*
          * Exercise 8.
@@ -171,7 +170,22 @@ public class ProblemSet1 {
          * What is the surface area of a standard Cornhole board?
          */
 
+		 // Use a constant to represent the length of the board.
+		 // Use a constant to represent the width of the board.
+		 // Use a constant to represent the diameter of the hole.
+		 // Round the square inches to two decimals.
+		 // Format the square inches with separating commas.
 
+		 final int CORNHOLE_LENGTH = 48;
+		 final int CORNHOLE_WIDTH = 24;
+		 final int CORNHOLE_DIAMETER = 6;
+
+		 int radius = CORNHOLE_DIAMETER / 2;
+		 int cornholeArea = CORNHOLE_WIDTH * CORNHOLE_LENGTH;
+		 double cornholeHoleArea = Math.PI * radius * radius;
+		 double finalCornholeArea = cornholeArea - cornholeHoleArea;
+
+		 System.out.printf("\n%,.2f square inches.\n", finalCornholeArea);
 
         /*
          * Exercise 9.
