@@ -144,7 +144,7 @@ public class ProblemSet1 {
 		 double moneyForState = taxableSalary * STATE_TAX;
 		 taxableSalary = taxableSalary - moneyForState;
 
-		 System.out.println(String.format("\n$%,.2f", taxableSalary) + ".");
+		 System.out.printf("\n$%,.2f.\n", taxableSalary);
 
         /*
          * Exercise 7.
@@ -158,11 +158,12 @@ public class ProblemSet1 {
 		 final int BUS_CAPACITY = 54;
 
 		 int totalPeople = STUDENTS + TEACHERS;
+		 int lastBusNum = totalPeople % BUS_CAPACITY;
+		 double peoplePerBus = ((double)totalPeople) / ((double)BUS_CAPACITY);
+		 double numOfBuses = Math.ceil(peoplePerBus);
 
-		 int lastBusNum = 7;
-		 String lastBus = lastBusNum.toString();
-
-		 System.out.println("\n" + "x" + " buses are needed, with " + lastBusNum.toString() + " on the last bus.");
+		 System.out.printf("\n%.0f buses are needed, with %d passengers on the last bus.", numOfBuses, lastBusNum);
+		 // ("\n" + numOfBuses + " buses are needed, with " + lastBus + " on the last bus.");
 
         /*
          * Exercise 8.
